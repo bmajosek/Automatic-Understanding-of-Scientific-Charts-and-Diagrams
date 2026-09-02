@@ -402,7 +402,7 @@ def _qa_execution_summary(qa_summary: pd.DataFrame) -> pd.DataFrame:
 def _alignment_stage_analysis(
     qa_summary: pd.DataFrame,
     qa_breakdown: pd.DataFrame,
-    verification_summary: pd.DataFrame,
+    _verification_summary: pd.DataFrame,
 ) -> pd.DataFrame:
     """Return no stage profile until direct intermediate measures exist.
 
