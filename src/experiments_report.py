@@ -6,7 +6,10 @@ from pathlib import Path
 import json
 import pandas as pd
 
-from dataset_catalog import list_planned, list_downloadable, load_catalog
+try:
+    from .dataset_catalog import list_planned, list_downloadable, load_catalog
+except ImportError:  # Support direct execution with ``src`` on sys.path.
+    from dataset_catalog import list_planned, list_downloadable, load_catalog
 
 
 def generate_experiments_chapter(

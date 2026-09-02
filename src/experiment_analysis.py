@@ -10,11 +10,18 @@ from typing import Iterable
 import pandas as pd
 import numpy as np
 
-from metrics import AnswerEvaluation, ConfusionMatrix, NumericalMetrics
-from model_registry import model_family
-from pipelines.common import is_prediction_failure, safe_str
-from pipelines.runner import model_uses_gemini
-from pipelines.tasks import MODEL_TASKS, TASK_SPEC, load_task_rows
+try:
+    from .metrics import AnswerEvaluation, ConfusionMatrix, NumericalMetrics
+    from .model_registry import model_family
+    from .pipelines.common import is_prediction_failure, safe_str
+    from .pipelines.runner import model_uses_gemini
+    from .pipelines.tasks import MODEL_TASKS, TASK_SPEC, load_task_rows
+except ImportError:  # Support direct execution with ``src`` on sys.path.
+    from metrics import AnswerEvaluation, ConfusionMatrix, NumericalMetrics
+    from model_registry import model_family
+    from pipelines.common import is_prediction_failure, safe_str
+    from pipelines.runner import model_uses_gemini
+    from pipelines.tasks import MODEL_TASKS, TASK_SPEC, load_task_rows
 
 
 MODEL_LABELS = {

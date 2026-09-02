@@ -11,7 +11,12 @@ from typing import Any, Dict, List
 
 import pandas as pd
 
-from config_loader import ProjectConfig
+try:
+    from ..config_loader import ProjectConfig
+    from ..metrics import AnswerEvaluation
+except ImportError:  # Support direct execution with ``src`` on sys.path.
+    from config_loader import ProjectConfig
+    from metrics import AnswerEvaluation
 from .chart_structure import detect_chart_structure
 from .common import (
     answer_from_context,
@@ -36,7 +41,6 @@ from .hf_models import HFImageTextModel
 from .table_reasoner import parse_deplot_cells, symbolic_answer
 from .tasks import MODEL_TASKS, TASK_SPEC
 from .tesseract_config import resolve_tesseract
-from metrics import AnswerEvaluation
 
 
 IMPLEMENTED_MODELS = set(MODEL_TASKS.keys())

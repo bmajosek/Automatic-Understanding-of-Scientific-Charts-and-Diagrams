@@ -6,15 +6,16 @@ from pathlib import Path
 from typing import Dict, Any
 import pandas as pd
 import numpy as np
-from io_utils import load_csv
-from model_registry import EXCLUDE_FROM_SCOREBOARD, scoreboard_models
-from pipelines.common import is_prediction_failure
-from metrics import (
-    NumericalMetrics,
-    AnswerEvaluation,
-    ComponentMetrics,
-    ConfusionMatrix,
-)
+try:
+    from .io_utils import load_csv
+    from .model_registry import EXCLUDE_FROM_SCOREBOARD, scoreboard_models
+    from .pipelines.common import is_prediction_failure
+    from .metrics import NumericalMetrics, AnswerEvaluation, ComponentMetrics, ConfusionMatrix
+except ImportError:  # Support direct execution with ``src`` on sys.path.
+    from io_utils import load_csv
+    from model_registry import EXCLUDE_FROM_SCOREBOARD, scoreboard_models
+    from pipelines.common import is_prediction_failure
+    from metrics import NumericalMetrics, AnswerEvaluation, ComponentMetrics, ConfusionMatrix
 
 
 class Evaluator:

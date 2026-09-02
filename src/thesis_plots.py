@@ -10,7 +10,10 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use("Agg")
 
-from model_registry import BASELINES, model_family
+try:
+    from .model_registry import BASELINES, model_family
+except ImportError:  # Support direct execution with ``src`` on sys.path.
+    from model_registry import BASELINES, model_family
 
 plt.rcParams.update({
     "font.size": 11,

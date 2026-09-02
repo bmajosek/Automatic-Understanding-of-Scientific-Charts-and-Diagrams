@@ -7,9 +7,14 @@ from typing import Iterable
 
 import pandas as pd
 
-from pipelines.common import is_prediction_failure, safe_str
-from pipelines.gemini_client import is_gemini_quota_error
-from pipelines.tasks import TASK_SPEC
+try:
+    from .pipelines.common import is_prediction_failure, safe_str
+    from .pipelines.gemini_client import is_gemini_quota_error
+    from .pipelines.tasks import TASK_SPEC
+except ImportError:  # Support direct execution with ``src`` on sys.path.
+    from pipelines.common import is_prediction_failure, safe_str
+    from pipelines.gemini_client import is_gemini_quota_error
+    from pipelines.tasks import TASK_SPEC
 
 
 def validate_prediction_outputs(
