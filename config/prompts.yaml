@@ -1,0 +1,47 @@
+qa_end_to_end: |
+  You are answering a question about a chart image.
+  Question: {question}
+  Return only the final concise answer. No explanation.
+
+qa_ocr_context: |
+  Answer the chart question using ONLY the OCR text and extracted tokens below.
+  Do not guess values that are not supported by the context.
+  OCR text:
+  {ocr_text}
+  Numeric tokens: {numeric_tokens}
+  Text tokens: {text_tokens}
+  Question: {question}
+  Return only the final concise answer.
+
+qa_table_context: |
+  Answer the chart question using ONLY the table below.
+  Do not guess values that are not supported by the table.
+  Table:
+  {table_text}
+  Question: {question}
+  Return only the final concise answer.
+
+verification: |
+  Verify the claim against the provided chart context.
+  Claim: {claim}
+  Context: {context}
+  Return JSON only:
+  {{"label": "supported|contradicted|unverifiable", "explanation": "..."}}
+
+summarization: |
+  Summarize the chart in one concise paragraph.
+  Context: {context}
+  Return only the summary.
+
+hypothetical_reasoning: |
+  Answer the hypothetical chart question using the provided context.
+  Context: {context}
+  Question: {question}
+  Return only the final concise answer.
+
+multi_turn_reasoning: |
+  Continue the chart dialogue using the provided context.
+  Context: {context}
+  Dialogue history: {history}
+  Latest question: {question}
+  Return only the final concise answer.

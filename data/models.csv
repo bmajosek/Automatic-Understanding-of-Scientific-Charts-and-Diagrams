@@ -1,0 +1,3 @@
+model_name,model_family,approach,temperature,max_tokens,prompt_version,input_type,notes
+matcha_chartqa_ocr_free_pipeline,MatCha ChartQA,ocr_free,,64,matcha_chartqa_v1,image+question,IMPLEMENTED local checkpoint. MatCha fine-tuned on ChartQA.
+matcha_plotqa_transfer_pipeline,MatCha PlotQA transfer,ocr_free,,64,matcha_plotqa_transfer_v1,image+question,IMPLEMENTED local checkpoint. PlotQA fine-tuning evaluated out of domain on ChartQA.

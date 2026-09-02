@@ -1,0 +1,45 @@
+{
+  "purpose": "Supervisor-review evaluation cohort",
+  "split": "test",
+  "sampling_strategy": "seeded stratified sample by ChartQA human/augmented origin",
+  "seed": 42,
+  "qa_target": 1000,
+  "qa_unique_charts": 819,
+  "qa_origin_counts": {
+    "augmented": 500,
+    "human": 500
+  },
+  "verification_label_counts": {
+    "supported": 150,
+    "unverifiable": 150,
+    "contradicted": 150
+  },
+  "verification_generation": {
+    "supported": "original ChartQA question and answer",
+    "contradicted": "answer changed beyond the 5% tolerance",
+    "unverifiable": "question from a different chart; all 150 records completed a record-level absence audit, with 20 ambiguous questions replaced"
+  },
+  "unverifiable_manual_review_required": 0,
+  "table_reference_cells": 10640,
+  "summary_reference_source": "synthetic_from_qa; exploratory only, not Chart-to-Text",
+  "files_sha256": {
+    "questions.csv": "76c6d3304974d05ee2d83b3709125be1ee30d010433d78abe421b82dab93b713",
+    "charts.csv": "3c0e90847deb46461cd5ebe8cea6763493a09eaffedd82fad26578d7bc56cd8d",
+    "claims.csv": "6a3060dca12be0a4fbeaa5f9694a529e81202cf1d4a5c5d807058bc3d1220684",
+    "tables_gt.csv": "2d7fccf91ac813d28701b9b2cba34a2a4eb149246b03de25924860fd1d5e0b74",
+    "summaries.csv": "a62ae061312f5470af1822d68152f8c8bfd2f854b4993989a9d27406c869be4e",
+    "review_qa_cohort.csv": "544661d0f88c49153bf09bdf4692a0cc217bbc7e056cb52159aa65444d8204ea",
+    "unverifiable_manual_review_queue.csv": "7dea3f3acb45aeab7189c481cdac98be6ab9633c84545852824293068b1ab283",
+    "unverifiable_reviewed.csv": "4e92962370eda66526c11b410549055c537768769b16372c1f9edd87f4a3e352"
+  },
+  "unverifiable_review": {
+    "status": "complete",
+    "records_reviewed": 150,
+    "confirmed_unverifiable": 150,
+    "ambiguous_records_replaced": 20,
+    "review_method": "Codex-assisted record-level audit against target-chart OCR, reference tables, and ChartQA question context; author responsibility retained",
+    "limitation": "single assisted audit; no independent second reviewer or inter-annotator agreement measurement",
+    "original_queue_retained": "unverifiable_manual_review_queue.csv",
+    "reviewed_file": "unverifiable_reviewed.csv"
+  }
+}

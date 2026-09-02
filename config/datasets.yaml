@@ -1,0 +1,83 @@
+# Dataset registry for thesis experiments.
+# Auto-downloadable datasets are converted into charts/questions/claims/summaries.
+
+datasets:
+  chartqa:
+    status: IMPLEMENTED
+    converter: chartqa
+    can_download_auto: true
+    hf_repo: ahmed-masry/ChartQA
+    source_url: https://huggingface.co/datasets/ahmed-masry/ChartQA
+    tasks: [qa, verification, summarization, reasoning]
+    max_examples: null
+
+  chartqapro:
+    status: IMPLEMENTED
+    converter: hf_qa
+    can_download_auto: true
+    hf_repo: ahmed-masry/ChartQAPro
+    source_url: https://huggingface.co/datasets/ahmed-masry/ChartQAPro
+    tasks: [qa, verification, summarization, reasoning, hypothetical]
+    max_examples: 5000
+
+  polychartqa:
+    status: IMPLEMENTED
+    converter: hf_qa
+    can_download_auto: true
+    hf_repo: kakaobrain/PolyChartQA
+    source_url: https://huggingface.co/datasets/kakaobrain/PolyChartQA
+    tasks: [qa, verification, summarization, multilingual]
+    max_examples: 3000
+
+  scigraphqa:
+    status: IMPLEMENTED
+    converter: hf_qa
+    can_download_auto: true
+    hf_repo: alexshengzhili/SciGraphQA-295K-train
+    source_url: https://huggingface.co/datasets/alexshengzhili/SciGraphQA-295K-train
+    tasks: [qa, verification, summarization, multi_turn, reasoning, scientific_figures]
+    max_examples: 3000
+
+  chartx:
+    status: PLANNED
+    converter: hf_qa
+    can_download_auto: false
+    source_url: https://huggingface.co/datasets/THUDM/ChartX
+    tasks: [qa, verification, summarization, table_extraction, reasoning]
+    instructions: THUDM/ChartX is not public/available on Hugging Face; replace later or add manually.
+
+  chartcheck:
+    status: PLANNED
+    converter: chartcheck
+    can_download_auto: false
+    source_url: https://github.com/allenai/chartcheck
+    tasks: [verification, reasoning]
+    instructions: Clone into data/raw/chartcheck and add a converter.
+
+  chart_to_text:
+    status: PLANNED
+    converter: chart_to_text
+    can_download_auto: false
+    source_url: https://github.com/visual-analytics-workshop/Chart-to-text
+    tasks: [summarization]
+
+  figureqa:
+    status: PLANNED
+    converter: figureqa
+    can_download_auto: false
+    source_url: https://www.microsoft.com/en-us/research/project/figureqa/
+    tasks: [qa, verification]
+
+  dvqa:
+    status: PLANNED
+    converter: dvqa
+    can_download_auto: false
+    source_url: https://github.com/chiragii/DVQA
+    tasks: [qa]
+
+  plotqa:
+    status: PLANNED
+    converter: plotqa
+    can_download_auto: false
+    source_url: https://github.com/NiteshMethani/PlotQA
+    tasks: [qa, summarization]

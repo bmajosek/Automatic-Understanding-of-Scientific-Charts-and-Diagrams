@@ -1,0 +1,28 @@
+# Active runnable models (IMPLEMENTED). Planned models are metadata only.
+
+implemented:
+  baselines:
+    - oracle_upper_bound
+    - constant_answer_baseline
+    - train_prior_baseline
+  explicit_pipelines:
+    - classical_cv_ocr_pipeline
+    - chartocr_reasoning_pipeline
+    - ocr_gemini_reasoning_pipeline
+    - deplot_table_gemini_pipeline
+    - pix2struct_ocr_free_pipeline
+    - matcha_chartqa_ocr_free_pipeline
+    - matcha_plotqa_transfer_pipeline
+    - table_symbolic_reasoner_pipeline
+  implicit:
+    - gemini_end_to_end
+
+planned_related_work:
+  - donut_ocr_free_pipeline
+  - layoutlm_ocr_layout_pipeline
+  - unichart_chart_specific
+  - structchart_schema_pipeline
+  - gpt4o_end_to_end
+  - claude_end_to_end
+  - qwen2vl_end_to_end
+  - chartvlm_end_to_end

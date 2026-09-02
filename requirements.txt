@@ -1,0 +1,12 @@
+pandas>=1.5.0
+numpy>=1.23.0
+matplotlib>=3.6.0
+pyyaml>=6.0
+tqdm>=4.64.0
+Pillow>=9.0.0
+
+# Optional dependencies for dataset acquisition
+datasets>=2.10.0
+fsspec[http]>=2023.1.0,<=2026.2.0
+huggingface_hub>=0.15.0
+kaggle>=1.5.12

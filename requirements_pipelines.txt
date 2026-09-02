@@ -1,0 +1,16 @@
+pandas
+numpy
+pillow
+opencv-python
+pytesseract
+easyocr
+transformers
+-r requirements_torch_cuda.txt
+sentencepiece
+accelerate
+google-genai
+python-dotenv
+pyyaml
+datasets
+fsspec[http]>=2023.1.0,<=2026.2.0
+huggingface_hub
