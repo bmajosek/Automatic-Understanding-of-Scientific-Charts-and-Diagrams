@@ -15,7 +15,7 @@ Raw images, licensed datasets, model weights, API credentials, predictions, and 
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate              # Windows: .venv\\Scripts\\activate
+source .venv/bin/activate              # Windows: .venv\Scripts\activate
 python -m pip install -e ".[test]"
 ```
 
