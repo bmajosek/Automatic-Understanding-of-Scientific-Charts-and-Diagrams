@@ -514,12 +514,6 @@ def verification_forest(summary: pd.DataFrame, path: Path) -> list[Path]:
         NO_UNVERIFIABLE_CEILING, color="#A33A3A", linestyle="--", linewidth=1.2,
         label="No-unverifiable ceiling (66.7%)",
     )
-    ax.annotate(
-        "66.7% ceiling without\nan unverifiable decision",
-        xy=(NO_UNVERIFIABLE_CEILING, 0.98), xycoords=("data", "axes fraction"),
-        xytext=(-8, -4), textcoords="offset points", ha="right", va="top",
-        color="#A33A3A", fontsize=9,
-    )
     ax.set_xlim(-0.01, 0.75)
     ax.xaxis.set_major_formatter(_percentage_axis())
     ax.set_xlabel("Score (%)")
@@ -530,7 +524,7 @@ def verification_forest(summary: pd.DataFrame, path: Path) -> list[Path]:
             Line2D([0], [0], color="#A33A3A", linestyle="--", label="No-unverifiable ceiling (66.7%)"),
             Line2D([0], [0], marker="o", color=LOCAL_COLOR, label="Accuracy (95% cluster-bootstrap CI)"),
             Line2D([0], [0], marker="s", color="#555555", label="Macro-F1 (95% cluster-bootstrap CI)"),
-        ], loc="lower right", frameon=False,
+        ], loc="upper left", frameon=False,
     )
     return _save(fig, path)
 
