@@ -4,9 +4,9 @@ type: software
 authors:
   - family-names: Maj
     given-names: Bartosz
-    affiliation: Wroclaw University of Science and Technology
-    orcid: "https://orcid.org/0009-0006-8624-5259"
+    affiliation: Warsaw University of Technology
 version: 0.1.0
 date-released: 2026-09-02
 repository-code: "https://github.com/bmajosek/Automatic-Understanding-of-Scientific-Charts-and-Diagrams"
 abstract: "Analysis and reporting code accompanying a master's thesis on automatic understanding of scientific charts and diagrams."
+message: "If you use this software, please cite the accompanying master's thesis and this repository."

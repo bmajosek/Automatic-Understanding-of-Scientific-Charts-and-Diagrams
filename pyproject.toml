@@ -6,7 +6,17 @@ build-backend = "setuptools.build_meta"
 name = "chart-understanding-results"
 version = "0.1.0"
 description = "Results pipeline for chart understanding thesis evaluation"
+readme = "README.md"
 requires-python = ">=3.10"
+authors = [
+    { name = "Bartosz Maj" },
+]
+keywords = [
+    "chart understanding",
+    "chart question answering",
+    "multimodal evaluation",
+    "scientific charts",
+]
 dependencies = [
     "pandas>=1.5.0",
     "numpy>=1.23.0",
@@ -27,6 +37,9 @@ test = [
     "pytest>=8.0",
     "ruff>=0.6",
 ]
+
+[project.urls]
+Repository = "https://github.com/bmajosek/Automatic-Understanding-of-Scientific-Charts-and-Diagrams"
 
 [tool.setuptools.packages.find]
 include = ["src", "src.*"]
