@@ -144,8 +144,8 @@ Inference is resumable and records failures for later audit.
 
 ```bash
 python scripts/check_secrets.py --history --include-untracked
-ruff check src scripts tests
-pytest -q
+python -m ruff check src scripts tests
+python -m pytest -q
 ```
 
 The automated workflow runs these checks on Python 3.10 and 3.11. It does not

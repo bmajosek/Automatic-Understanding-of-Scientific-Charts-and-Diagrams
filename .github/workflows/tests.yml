@@ -52,7 +52,7 @@ jobs:
         run: python -m pip install -e ".[test]"
 
       - name: Lint
-        run: ruff check src scripts tests
+        run: python -m ruff check src scripts tests
 
       - name: Test
-        run: pytest -q
+        run: python -m pytest -q
