@@ -97,9 +97,17 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+!.env.example
 config/secrets.yaml
 *.key
 *.secret
+*.pem
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+.secrets/
 .venv
 env/
 venv/

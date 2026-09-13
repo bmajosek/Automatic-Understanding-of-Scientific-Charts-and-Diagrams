@@ -10,7 +10,25 @@ permissions:
   contents: read
 
 jobs:
+  secret-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out complete history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check tracked files and Git history for secrets
+        run: python scripts/check_secrets.py --history
+
   checks:
+    needs: secret-scan
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
